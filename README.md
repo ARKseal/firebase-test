@@ -7,7 +7,13 @@ This is a test for firebase hosting
     * Linux/Mac: `python3 -m venv venv` and activate using `source ./venv/bin/activate`
     * deactivate using `deactivate`
 2. install dependencies by running `pip install -r requirements.txt`
-3. run app using `python main.py`
+3. run app using `python app.py`
+
+## Run on Docker:
+1. cd into server `cd ./server`
+2. build docker image using `docker build -t crescendoforacause-server .`
+3. run docker image using `docker run -dp 8080:8080 crescendoforacause-server`
+4. see output with url: `http://localhost:8080/`
 
 ## Firebase Node hosting
 1. run `npm init -y` to initialize node
