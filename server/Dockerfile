@@ -12,4 +12,4 @@ WORKDIR /app
 ENV PORT 8080
 
 # 5
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 app:appex
+CMD exec gunicorn -b 0.0.0.0:$PORT --workers 1 --threads 8 app:app
