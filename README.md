@@ -2,9 +2,23 @@
 This is a test for firebase hosting
 
 ## Setup:
-1. Make a virutal enviroment (venv) and activate it
+1. make a virutal enviroment (venv) and activate it
     * Windows: `python -m venv venv` and activate using `.\venv\Scripts\activate`
     * Linux/Mac: `python3 -m venv venv` and activate using `source ./venv/bin/activate`
     * deactivate using `deactivate`
-2. install dependancies by running `pip install -r requirements.txt`
+2. install dependencies by running `pip install -r requirements.txt`
 3. run app using `python main.py`
+
+## Firebase Node hosting
+1. run `npm init -y` to initialize node
+2. install using `npm install -D firebase-tools`
+3. run `./node_modules/.bin/firebase init hosting` to initialize hosting
+4. remove static index.html
+    * Windows: del static\index.html
+    * Linux/Mac: rm static/index.html
+5. Run using `./node_modules/.bin/firebase serve`
+
+## To Deploy:
+1. send new build using `gcloud builds submit --tag gcr.io/<project-id>/flask-fire`
+2. run using `gcloud beta run deploy --image gcr.io/<project-id>/flask-fire`
+2. deploy using `firebase deploy`
